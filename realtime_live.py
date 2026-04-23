@@ -102,7 +102,9 @@ async def run(args: argparse.Namespace) -> None:
         list_cameras(args.max_camera_index)
         return
 
-    api_key = os.getenv("DECART_API_KEY")
+    raw_api_key = os.getenv("DECART_API_KEY")
+    api_key = raw_api_key.strip() if raw_api_key else ""
+    api_key = api_key.strip("{}")
     if not api_key:
         raise RuntimeError("Missing DECART_API_KEY environment variable.")
 
