@@ -1,1 +1,4 @@
 decart>=0.0.35
+aiortc>=1.14.0
+opencv-python>=4.10.0
+tenacity>=9.1.4
