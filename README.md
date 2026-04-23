@@ -36,6 +36,24 @@ Expected behavior:
 - You should see status updates (`pending`, `processing`, `completed`)
 - The script should print `Saved output to transformed_video.mp4`
 
+## Repository setup (GitHub)
+
+Create a local commit and push to a new GitHub repository:
+
+```powershell
+git add .env.example .gitignore README.md main.py requirements.txt
+git commit -m "Initial Decart starter setup" -m "Co-Authored-By: Oz <oz-agent@warp.dev>"
+git remote add origin <YOUR_GITHUB_REPO_URL>
+git push -u origin master
+```
+
+If `origin` already exists, update it:
+
+```powershell
+git remote set-url origin <YOUR_GITHUB_REPO_URL>
+git push -u origin master
+```
+
 ## Troubleshooting
 
 - `Missing DECART_API_KEY environment variable`
